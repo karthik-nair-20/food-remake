@@ -1,0 +1,36 @@
+header{
+    background: #fff;
+    padding: 0;
+    border-bottom: 1px solid #e72929;
+  } 
+
+a.logo{
+    font-weight: bold;
+    padding: 1em;
+  }
+  a{
+
+    color: #af1313;
+  }
+
+  a:hover{
+    background: #e72929;
+    color: #fff;
+  }
+
+  .container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul{
+    list-style-type: none;
+    margin: 0;
+  }
+
+  nav ul li a{
+    padding: 1em;
+    display: inline-block;
+  }
