@@ -19,12 +19,16 @@ export class HomeComponent {
     this.route.params.subscribe( (val) =>{
       if(val["searchTerm"])
       {
-        this.food = this.foodService.getAll().filter(food => food.name.toLowerCase().includes(val["searchTerm"].toLowerCase()))
+        // this.food = this.foodService.getAll().filter(food => food.name.toLowerCase().includes(val["searchTerm"].toLowerCase()));
+        this.food = this.foodService.getAllSearch(val["searchTerm"]);
+      }
+      else if(val["tag"])
+      {
+        this.food = this.foodService.getAllFoodsByTag(val["tag"]);
       }
       else{
         this.food = this.foodService.getAll();
       }
-
     })
 
 

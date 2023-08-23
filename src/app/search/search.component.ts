@@ -12,7 +12,7 @@ export class SearchComponent {
 
   constructor(private route:ActivatedRoute , private router:Router ){}
 
-  NgOnInit():void{
+  ngOnInit():void{
 
     this.route.params.subscribe( (val) =>{
       if(val[this.searchTerm])
