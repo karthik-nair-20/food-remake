@@ -7,6 +7,14 @@ import { tag } from 'src/app/shared/model/tag';
 })
 export class FoodService {
 
+
+  getAllFoodById(id:number):Food
+  {
+    return this.getAll().find(food => food.id == id)!;
+  }
+
+
+
   getAllSearch(searchTerm:string):Food[]{
     return this.getAll().filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase()));
   }
